@@ -1,5 +1,5 @@
 
-from generated_api.nlp.spacy import NERExtractor, ttypes
+from nlpapi.spacy import NERExtractor, ttypes
 from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol

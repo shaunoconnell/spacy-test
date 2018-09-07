@@ -1,5 +1,16 @@
-SPACY-WRAPPER
+NLP-WRAPPER
 =================================
 
+wrapper app around spacy API, should assist in NLP RPC using thrift.
 
-wrapper app around spacy API
+## NLPAPI
+
+common generated interfaces between client and server
+
+## NLPClient
+
+thrift client for NLP
+
+## NLPServer
+
+thrift server for NLP

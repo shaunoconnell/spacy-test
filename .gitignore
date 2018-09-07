@@ -1,3 +1,6 @@
 generated_api/
 .idea
 **/*.pyc
+*.egg-info
+**/build
+**/dist

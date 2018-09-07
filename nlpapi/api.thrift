@@ -1,4 +1,4 @@
-namespace py nlp.spacy
+namespace py spacy
 
 struct EntityLabel {
     1: required string label;

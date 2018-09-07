@@ -24,12 +24,17 @@ ner = nlp.get_pipe('ner')
 
 
 def print_training_data():
+    print("----------------------------------")
     for train_item in TRAIN_DATA:
-        print("----------------------------------")
-        print(train_item[0])
-        found_entities = nlp(train_item[0]).ents
-        for fe in found_entities:
-            print("{}:[{}]".format(fe.label_, fe.text))
+        print_text_entities(train_item[0])
+
+
+def print_text_entities(my_string):
+    print(my_string)
+    found_entities = nlp(my_string).ents
+    for fe in found_entities:
+        print("{}:[{}]".format(fe.label_, fe.text))
+
 
 print_training_data()
 
@@ -50,6 +55,14 @@ with nlp.disable_pipes(*other_pipes):  # only train NER
         print(losses)
 
 print_training_data()
+
+print_text_entities("Fugazi is great")
+
+# reset the model
+nlp = spacy.load(MODEL_PATH)
+print_text_entities("Fugazi is great")
+
+# nlp.to_disk("/home/shaun/work/spacy-models/modified_eng")
 
 
 
